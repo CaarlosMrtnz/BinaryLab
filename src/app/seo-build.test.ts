@@ -74,6 +74,14 @@ describe('generación SEO del build sin servicios externos', () => {
     for (const page of publicPages) {
       const doc = html(directory, join(page.path ?? '', 'index.html'));
       expect(doc.documentElement.lang).toBe('es');
+      const verification = doc.head.querySelectorAll(
+        'meta[name="google-site-verification"]',
+      );
+      expect(verification).toHaveLength(1);
+      expect(verification[0]?.getAttribute('content')).toBe(
+        'Bjmwd60fTq2UzK8sIxxljujjs62CRenchlaSfIAxTQg',
+      );
+      expect(verification[0]?.hasAttribute('data-binarylab-seo')).toBe(false);
       expect(doc.title).toBe(page.title);
       expect(doc.querySelectorAll('link[rel="canonical"]')).toHaveLength(1);
       expect(
