@@ -1,0 +1,57 @@
+node_modules/
+dist/
+coverage/
+.vite/
+.cache/
+.eslintcache
+.netlify/
+playwright-report/
+test-results/
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+private/
+.DS_Store
+Thumbs.db
+*.pdf
+artifacts/
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.bundle
+*.swp
+*.swo
+# Credenciales y configuración privada de herramientas locales.
+.npmrc
+.netrc
+.aws/
+.ssh/
+.codex/
+.agents/
+*.tsbuildinfo
+# Referencias originales conservadas localmente, sin redistribución.
+Laboratorio binario en tonos pastel.png
+Presentación de diseño UI de BinaryLab.png
+BinaryLab_prompt_maestro_Codex_v1_1_git_local.md
+
+# Fuentes operativas y materiales privados: no forman parte de la distribución pública.
+BinaryLab_base_conocimiento_binario.md
+BinaryLab_conocimiento_academico_v2.md
+BinaryLab_especificacion_diseno_ux_ui_v1.md
+BinaryLab_especificacion_tecnica_desarrollo_v1.md
+scripts/import-academic.mjs
+.npm/
+npm-cache/
+backups/
+public-manifest.json
+public-manifest.csv
+Desktop.ini
+*~

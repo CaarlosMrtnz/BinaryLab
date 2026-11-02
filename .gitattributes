@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.png binary
+*.woff binary
+*.woff2 binary
+# Preserve whitespace in the generated, verbatim upstream license notices.
+public/THIRD-PARTY-NOTICES.txt -whitespace

@@ -1,0 +1,590 @@
+[
+  {
+    "id": "01.1",
+    "categoryId": "01",
+    "prompt": "¿Cuántos valores distintos permiten representar cinco bits sin signo y cuál es el máximo?",
+    "academicAnswer": "32 combinaciones; máximo 31.",
+    "explanation": "2⁵ = 32 patrones; el rango es 0…2⁵−1 = 0…31."
+  },
+  {
+    "id": "01.2",
+    "categoryId": "01",
+    "prompt": "Señala los pesos activos en `0101₂` (4 bits).",
+    "academicAnswer": "4 y 1; valor decimal 5.",
+    "explanation": "La tercera posición desde la derecha pesa 2²=4 y la primera pesa 2⁰=1."
+  },
+  {
+    "id": "01.3",
+    "categoryId": "01",
+    "prompt": "¿Cuántos bytes tiene una palabra de 32 bits?",
+    "academicAnswer": "4 bytes.",
+    "explanation": "32 bits ÷ 8 bits/byte = 4 bytes."
+  },
+  {
+    "id": "01.4",
+    "categoryId": "01",
+    "prompt": "¿Es par o impar `10110₂`? Justifica tu respuesta.",
+    "academicAnswer": "Par; vale 22₁₀.",
+    "explanation": "Su LSB es 0, por tanto es par. La suma de pesos es 16+4+2=22."
+  },
+  {
+    "id": "02.1",
+    "categoryId": "02",
+    "prompt": "Convierte `10110110₂` a decimal.",
+    "academicAnswer": "182₁₀.",
+    "explanation": "128+32+16+4+2=182."
+  },
+  {
+    "id": "02.2",
+    "categoryId": "02",
+    "prompt": "Convierte `1100101₂` a decimal.",
+    "academicAnswer": "101₁₀.",
+    "explanation": "64+32+4+1=101."
+  },
+  {
+    "id": "02.3",
+    "categoryId": "02",
+    "prompt": "Convierte `00101101₂` a decimal.",
+    "academicAnswer": "45₁₀.",
+    "explanation": "32+8+4+1=45; los ceros iniciales no cambian el valor sin signo."
+  },
+  {
+    "id": "02.4",
+    "categoryId": "02",
+    "prompt": "Convierte `11100011₂` a decimal.",
+    "academicAnswer": "227₁₀.",
+    "explanation": "128+64+32+2+1=227."
+  },
+  {
+    "id": "03.1",
+    "categoryId": "03",
+    "prompt": "Representa `37₁₀` en binario.",
+    "academicAnswer": "`100101₂`.",
+    "explanation": "37=32+4+1. Mediante divisiones sucesivas los restos, leídos en orden inverso, forman 100101."
+  },
+  {
+    "id": "03.2",
+    "categoryId": "03",
+    "prompt": "Representa `74₁₀` en binario.",
+    "academicAnswer": "`1001010₂`.",
+    "explanation": "74=64+8+2; se encienden las posiciones 6, 3 y 1."
+  },
+  {
+    "id": "03.3",
+    "categoryId": "03",
+    "prompt": "Representa `173₁₀` en binario usando ocho bits.",
+    "academicAnswer": "`10101101₂`.",
+    "explanation": "173=128+32+8+4+1, que ocupan las posiciones 7,5,3,2,0."
+  },
+  {
+    "id": "03.4",
+    "categoryId": "03",
+    "prompt": "Representa `240₁₀` en binario usando ocho bits.",
+    "academicAnswer": "`11110000₂`.",
+    "explanation": "240=128+64+32+16; los cuatro bits menos significativos son cero."
+  },
+  {
+    "id": "04.1",
+    "categoryId": "04",
+    "prompt": "Convierte `2D₁₆` a binario y decimal.",
+    "academicAnswer": "`0010 1101₂`; `45₁₀`.",
+    "explanation": "2→0010 y D→1101; 2×16+13=45."
+  },
+  {
+    "id": "04.2",
+    "categoryId": "04",
+    "prompt": "Convierte `AF₁₆` a binario y decimal.",
+    "academicAnswer": "`1010 1111₂`; `175₁₀`.",
+    "explanation": "A=10 y F=15; 10×16+15=175; cada cifra equivale a cuatro bits."
+  },
+  {
+    "id": "04.3",
+    "categoryId": "04",
+    "prompt": "Convierte `1110 0101₂` a hexadecimal y decimal.",
+    "academicAnswer": "`E5₁₆`; `229₁₀`.",
+    "explanation": "1110→E; 0101→5; E5₁₆=14×16+5=229."
+  },
+  {
+    "id": "04.4",
+    "categoryId": "04",
+    "prompt": "Convierte `9C₁₆` a binario y decimal.",
+    "academicAnswer": "`1001 1100₂`; `156₁₀`.",
+    "explanation": "9×16+12=156; 9→1001 y C→1100."
+  },
+  {
+    "id": "05.1",
+    "categoryId": "05",
+    "prompt": "Convierte `745₈` a decimal y binario.",
+    "academicAnswer": "`485₁₀`; `111 100 101₂`.",
+    "explanation": "7×64+4×8+5=448+32+5=485; cada dígito se expresa con tres bits."
+  },
+  {
+    "id": "05.2",
+    "categoryId": "05",
+    "prompt": "Convierte `326₈` a decimal y binario.",
+    "academicAnswer": "`214₁₀`; `011 010 110₂`.",
+    "explanation": "3×64+2×8+6=214; por grupos 3→011, 2→010, 6→110."
+  },
+  {
+    "id": "05.3",
+    "categoryId": "05",
+    "prompt": "Convierte `101110001₂` a octal.",
+    "academicAnswer": "`561₈`.",
+    "explanation": "Agrupar desde la derecha: 101 | 110 | 001 → 5 | 6 | 1."
+  },
+  {
+    "id": "05.4",
+    "categoryId": "05",
+    "prompt": "Convierte `77₈` a binario y decimal.",
+    "academicAnswer": "`111111₂`; `63₁₀`.",
+    "explanation": "7→111, 7→111; 7×8+7=63."
+  },
+  {
+    "id": "06.1",
+    "categoryId": "06",
+    "prompt": "Representa `3A₁₆` en decimal, octal y binario.",
+    "academicAnswer": "`58₁₀`; `72₈`; `111010₂`.",
+    "explanation": "3×16+10=58; 58=7×8+2; 3A hexadecimal son 0011 1010 binarios."
+  },
+  {
+    "id": "06.2",
+    "categoryId": "06",
+    "prompt": "Representa `157₈` en decimal, hexadecimal y binario.",
+    "academicAnswer": "`111₁₀`; `6F₁₆`; `1101111₂`.",
+    "explanation": "1×64+5×8+7=111; 111=6×16+15; en binario 001|101|111."
+  },
+  {
+    "id": "06.3",
+    "categoryId": "06",
+    "prompt": "Representa `234₁₀` en binario, hexadecimal y octal.",
+    "academicAnswer": "`11101010₂`; `EA₁₆`; `352₈`.",
+    "explanation": "234=128+64+32+8+2; agrupar en nibbles 1110|1010 → EA y en tríos 011|101|010 → 352."
+  },
+  {
+    "id": "06.4",
+    "categoryId": "06",
+    "prompt": "Representa `110101111₂` en decimal, hexadecimal y octal.",
+    "academicAnswer": "`431₁₀`; `1AF₁₆`; `657₈`.",
+    "explanation": "256+128+32+8+4+2+1=431; 0001|1010|1111=1AF y 110|101|111=657."
+  },
+  {
+    "id": "07.1",
+    "categoryId": "07",
+    "prompt": "Suma uno a `00101111₂` sin perder el ancho de ocho bits.",
+    "academicAnswer": "`00110000₂`.",
+    "explanation": "Los cuatro unos finales cambian a cero y el acarreo enciende el bit que pesa 16."
+  },
+  {
+    "id": "07.2",
+    "categoryId": "07",
+    "prompt": "Suma uno a `01111111₂` conservando ocho bits.",
+    "academicAnswer": "`10000000₂`.",
+    "explanation": "Los siete unos finales pasan a cero; el cero del MSB se convierte en uno; 127→128 sin signo."
+  },
+  {
+    "id": "07.3",
+    "categoryId": "07",
+    "prompt": "Suma uno a `11111111₂` en un contador sin signo de ocho bits con retorno circular.",
+    "academicAnswer": "Patrón `00000000₂`, con acarreo exterior 1.",
+    "explanation": "255+1=256, pero el valor almacenado módulo 256 es cero."
+  },
+  {
+    "id": "07.4",
+    "categoryId": "07",
+    "prompt": "Resta uno a `10010000₂` (sin signo).",
+    "academicAnswer": "`10001111₂`.",
+    "explanation": "144−1=143; el préstamo atraviesa los ceros de menor peso."
+  },
+  {
+    "id": "08.1",
+    "categoryId": "08",
+    "prompt": "Indica cantidad de patrones y rango sin signo para seis bits.",
+    "academicAnswer": "64 patrones; 0…63.",
+    "explanation": "2⁶=64 y máximo 2⁶−1=63."
+  },
+  {
+    "id": "08.2",
+    "categoryId": "08",
+    "prompt": "¿Cuál es el máximo natural representable con diez bits?",
+    "academicAnswer": "`1023₁₀`.",
+    "explanation": "2¹⁰−1=1023."
+  },
+  {
+    "id": "08.3",
+    "categoryId": "08",
+    "prompt": "Convierte `2 KiB` a bytes y bits.",
+    "academicAnswer": "2048 bytes y 16.384 bits.",
+    "explanation": "2×1024=2048 B; 2048×8=16.384 b."
+  },
+  {
+    "id": "08.4",
+    "categoryId": "08",
+    "prompt": "Expresa `1 MB` decimal en bytes y en MiB aproximadamente.",
+    "academicAnswer": "1.000.000 B ≈ 0,953674 MiB.",
+    "explanation": "1 MB=10⁶ B; 1 MiB=2²⁰ B; 10⁶/1.048.576≈0,953674."
+  },
+  {
+    "id": "09.1",
+    "categoryId": "09",
+    "prompt": "Calcula `1011₂ + 0111₂`.",
+    "academicAnswer": "`10010₂` (18₁₀).",
+    "explanation": "11+7=18. Suma columna a columna y propaga los acarreos."
+  },
+  {
+    "id": "09.2",
+    "categoryId": "09",
+    "prompt": "Calcula `11100₂ − 00101₂`.",
+    "academicAnswer": "`10111₂` (23₁₀).",
+    "explanation": "28−5=23; aplica préstamos a las columnas que lo necesiten."
+  },
+  {
+    "id": "09.3",
+    "categoryId": "09",
+    "prompt": "Invierte todos los bits de `00110101` mediante NOT de ocho bits.",
+    "academicAnswer": "`11001010`.",
+    "explanation": "Sustituir cada 0 por 1 y cada 1 por 0 sin modificar el ancho."
+  },
+  {
+    "id": "09.4",
+    "categoryId": "09",
+    "prompt": "Calcula `1111₂ + 0001₂` en cuatro bits sin signo y diferencia el resultado completo.",
+    "academicAnswer": "Suma completa `10000₂`; patrón de cuatro bits `0000` y acarreo exterior 1.",
+    "explanation": "15+1=16; los cuatro bits menos significativos son cero."
+  },
+  {
+    "id": "10.1",
+    "categoryId": "10",
+    "prompt": "Codifica `−18` en magnitud y signo de ocho bits.",
+    "academicAnswer": "`10010010`.",
+    "explanation": "|−18|=18=0010010₂ en siete bits; anteponer bit de signo 1."
+  },
+  {
+    "id": "10.2",
+    "categoryId": "10",
+    "prompt": "Descodifica `10100101` en magnitud y signo de ocho bits.",
+    "academicAnswer": "`−37₁₀`.",
+    "explanation": "Signo 1: negativo; magnitud 0100101₂=32+4+1=37."
+  },
+  {
+    "id": "10.3",
+    "categoryId": "10",
+    "prompt": "Codifica `+63` en magnitud y signo de ocho bits.",
+    "academicAnswer": "`00111111`.",
+    "explanation": "Bit de signo 0; magnitud 63=0111111₂."
+  },
+  {
+    "id": "10.4",
+    "categoryId": "10",
+    "prompt": "Interpreta `10000000` en magnitud y signo de ocho bits.",
+    "academicAnswer": "Cero negativo (`−0`), valor matemático 0.",
+    "explanation": "Bit de signo 1; los siete bits de magnitud son cero."
+  },
+  {
+    "id": "11.1",
+    "categoryId": "11",
+    "prompt": "Codifica `−18` en C1 de ocho bits.",
+    "academicAnswer": "`11101101`.",
+    "explanation": "+18=00010010; invertir los ocho bits → 11101101."
+  },
+  {
+    "id": "11.2",
+    "categoryId": "11",
+    "prompt": "Codifica `−45` en C1 de ocho bits.",
+    "academicAnswer": "`11010010`.",
+    "explanation": "+45=00101101; invertir ceros y unos → 11010010."
+  },
+  {
+    "id": "11.3",
+    "categoryId": "11",
+    "prompt": "Descodifica `11101010` en C1 de ocho bits.",
+    "academicAnswer": "`−21₁₀`.",
+    "explanation": "MSB=1; invertir →00010101₂=16+4+1=21; asignar signo negativo."
+  },
+  {
+    "id": "11.4",
+    "categoryId": "11",
+    "prompt": "Calcula `5 + (−3)` en C1 de ocho bits, mostrando el acarreo circular.",
+    "academicAnswer": "`00000010` (2₁₀).",
+    "explanation": "+5=00000101; −3=11111100; suma=1 00000001; sumar el acarreo final →00000010."
+  },
+  {
+    "id": "12.1",
+    "categoryId": "12",
+    "prompt": "Codifica `−18` en C2 de ocho bits.",
+    "academicAnswer": "`11101110`.",
+    "explanation": "+18=00010010; C1=11101101; sumar 1→11101110."
+  },
+  {
+    "id": "12.2",
+    "categoryId": "12",
+    "prompt": "Codifica `−45` en C2 de ocho bits.",
+    "academicAnswer": "`11010011`.",
+    "explanation": "+45=00101101; C1=11010010; +1→11010011."
+  },
+  {
+    "id": "12.3",
+    "categoryId": "12",
+    "prompt": "Descodifica `11101010` en C2 de ocho bits.",
+    "academicAnswer": "`−22₁₀`.",
+    "explanation": "Invertir→00010101; sumar uno→00010110₂=22; asignar negativo."
+  },
+  {
+    "id": "12.4",
+    "categoryId": "12",
+    "prompt": "Calcula `15 − 9` utilizando C2 de ocho bits.",
+    "academicAnswer": "`00000110` (6₁₀).",
+    "explanation": "15=00001111; −9=11110111; suma=1 00000110; conservar los ocho bits bajos."
+  },
+  {
+    "id": "13.1",
+    "categoryId": "13",
+    "prompt": "Interpreta `11110000` como patrón de ocho bits: sin signo, magnitud/signo, C1 y C2.",
+    "academicAnswer": "240; −112; −15; −16, respectivamente.",
+    "explanation": "Sin signo: 240. Magnitud: signo negativo, resto 1110000=112. C1: invertir a 00001111=15. C2: invertir y sumar uno=16."
+  },
+  {
+    "id": "13.2",
+    "categoryId": "13",
+    "prompt": "Determina el rango de C2 con seis bits.",
+    "academicAnswer": "−32 a +31.",
+    "explanation": "Mínimo −2⁵=−32; máximo 2⁵−1=31."
+  },
+  {
+    "id": "13.3",
+    "categoryId": "13",
+    "prompt": "¿Hay overflow al sumar `01111111 + 00000001` en C2 de ocho bits?",
+    "academicAnswer": "Sí; +127+1=+128 fuera de rango; bits almacenados `10000000`.",
+    "explanation": "El patrón almacenado equivaldría a −128 en C2; no representa la suma matemática."
+  },
+  {
+    "id": "13.4",
+    "categoryId": "13",
+    "prompt": "¿Hay overflow al sumar −128 y −1 en C2 de ocho bits?",
+    "academicAnswer": "Sí; el valor real −129 no cabe y se almacenaría `01111111`.",
+    "explanation": "10000000 + 11111111 = 1 01111111; conservar ocho bits daría +127, lo cual indica desbordamiento."
+  },
+  {
+    "id": "14.1",
+    "categoryId": "14",
+    "prompt": "Codifica las cifras decimales `2084` en BCD 8421.",
+    "academicAnswer": "`0010 0000 1000 0100`.",
+    "explanation": "Codifica cada cifra por separado: 2→0010, 0→0000, 8→1000, 4→0100."
+  },
+  {
+    "id": "14.2",
+    "categoryId": "14",
+    "prompt": "Interpreta `0011 0101 1001` como BCD 8421.",
+    "academicAnswer": "`359₁₀`.",
+    "explanation": "0011→3; 0101→5; 1001→9. Concatenar las cifras decimales."
+  },
+  {
+    "id": "14.3",
+    "categoryId": "14",
+    "prompt": "Expresa `95₁₀` tanto en BCD como en binario natural de ocho bits.",
+    "academicAnswer": "BCD `1001 0101`; binario natural `01011111`.",
+    "explanation": "BCD usa un nibble para 9 y otro para 5; binario natural usa el valor 95=64+16+8+4+2+1."
+  },
+  {
+    "id": "14.4",
+    "categoryId": "14",
+    "prompt": "¿Es válida la cadena `1010 0011` como BCD 8421?",
+    "academicAnswer": "No.",
+    "explanation": "El grupo 1010 equivale a 10 en binario y no codifica una cifra decimal BCD válida."
+  },
+  {
+    "id": "15.1",
+    "categoryId": "15",
+    "prompt": "Convierte `0,625₁₀` a fracción binaria.",
+    "academicAnswer": "`0.101₂`.",
+    "explanation": "0,625×2=1,25 →1; 0,25×2=0,5→0; 0,5×2=1→1; equivale a 1/2+1/8."
+  },
+  {
+    "id": "15.2",
+    "categoryId": "15",
+    "prompt": "Convierte `13,375₁₀` a binario.",
+    "academicAnswer": "`1101.011₂`.",
+    "explanation": "13=1101₂. La fracción 0,375=0,011₂; unir partes."
+  },
+  {
+    "id": "15.3",
+    "categoryId": "15",
+    "prompt": "Convierte `101.011₂` a decimal.",
+    "academicAnswer": "`5,375₁₀`.",
+    "explanation": "Parte entera 4+1=5; parte fraccionaria 1/4+1/8=0,375."
+  },
+  {
+    "id": "15.4",
+    "categoryId": "15",
+    "prompt": "Escribe los seis primeros bits tras el punto de la expansión binaria de `0,1₁₀`.",
+    "academicAnswer": "`0.000110…₂` (aproximación truncada a seis bits).",
+    "explanation": "Multiplicaciones: 0,1→0,2 (0), 0,2→0,4 (0), 0,4→0,8 (0), 0,8→1,6 (1), 0,6→1,2 (1), 0,2→0,4 (0). La expansión es periódica."
+  },
+  {
+    "id": "16.1",
+    "categoryId": "16",
+    "prompt": "Interpreta `10101100` en punto fijo sin signo con cuatro bits enteros y cuatro fraccionarios.",
+    "academicAnswer": "`10,75₁₀`.",
+    "explanation": "1010.1100₂=8+2+1/2+1/4=10,75."
+  },
+  {
+    "id": "16.2",
+    "categoryId": "16",
+    "prompt": "Codifica `2,625₁₀` en punto fijo sin signo de 4+4 bits.",
+    "academicAnswer": "`00101010`.",
+    "explanation": "Entero 2=0010; fracción 0,625=0,1010; concatenar 0010|1010."
+  },
+  {
+    "id": "16.3",
+    "categoryId": "16",
+    "prompt": "¿Cuál es la resolución de un punto fijo con ocho bits fraccionarios?",
+    "academicAnswer": "`1/256 = 0,00390625`.",
+    "explanation": "El último bit fraccionario pesa 2⁻⁸."
+  },
+  {
+    "id": "16.4",
+    "categoryId": "16",
+    "prompt": "Interpreta `0000000110000000` como punto fijo sin signo 8+8.",
+    "academicAnswer": "`1,5₁₀`.",
+    "explanation": "Parte entera 00000001=1; fracción 10000000 representa 1/2."
+  },
+  {
+    "id": "17.1",
+    "categoryId": "17",
+    "prompt": "Con sesgo 127, descodifica el exponente almacenado `10000010₂`.",
+    "academicAnswer": "Exponente real +3.",
+    "explanation": "10000010₂=130; e=130−127=3."
+  },
+  {
+    "id": "17.2",
+    "categoryId": "17",
+    "prompt": "Con sesgo 127, codifica el exponente real −5 en ocho bits.",
+    "academicAnswer": "`01111010`.",
+    "explanation": "E=−5+127=122; 122₁₀=01111010₂."
+  },
+  {
+    "id": "17.3",
+    "categoryId": "17",
+    "prompt": "Con sesgo 1023, calcula el exponente almacenado para e=+2 en once bits.",
+    "academicAnswer": "`10000000001₂` (E=1025).",
+    "explanation": "E=2+1023=1025=1024+1; en once bits es 10000000001."
+  },
+  {
+    "id": "17.4",
+    "categoryId": "17",
+    "prompt": "Con sesgo 127, descodifica `01111101₂` como campo de exponente normal.",
+    "academicAnswer": "Exponente real −2.",
+    "explanation": "01111101₂=125; e=125−127=−2."
+  },
+  {
+    "id": "18.1",
+    "categoryId": "18",
+    "prompt": "Escribe los campos IEEE 754 binary32 para +1 exacto.",
+    "academicAnswer": "`0 | 01111111 | 00000000000000000000000` (hex `3F800000`).",
+    "explanation": "Signo 0; 1=1.0₂×2⁰, exponente almacenado 0+127=127; fracción almacenada cero."
+  },
+  {
+    "id": "18.2",
+    "categoryId": "18",
+    "prompt": "Escribe los campos IEEE 754 binary32 para −2,5 exacto.",
+    "academicAnswer": "`1 | 10000000 | 01000000000000000000000` (hex `C0200000`).",
+    "explanation": "2,5=10.1₂=1.01₂×2¹; signo 1; exponente 128; fracción .01 seguida de ceros."
+  },
+  {
+    "id": "18.3",
+    "categoryId": "18",
+    "prompt": "Descodifica `0 | 10000000 | 01000000000000000000000` en binary32.",
+    "academicAnswer": "`+2,5₁₀`.",
+    "explanation": "E=128, e=1; fracción almacenada vale 2⁻²=0,25; (1+0,25)×2¹=2,5."
+  },
+  {
+    "id": "18.4",
+    "categoryId": "18",
+    "prompt": "Distingue el cero positivo y el negativo de IEEE 754 binary32.",
+    "academicAnswer": "`+0`: signo 0, E=0, fracción=0. `−0`: signo 1, E=0, fracción=0.",
+    "explanation": "El exponente y la fracción son todos ceros en ambos casos; solo cambia el bit de signo."
+  },
+  {
+    "id": "19.1",
+    "categoryId": "19",
+    "prompt": "Representa la letra ASCII mayúscula `A` en decimal, hexadecimal y un byte binario.",
+    "academicAnswer": "65₁₀; `41₁₆`; `01000001₂`.",
+    "explanation": "El código ASCII de A es 65; 65=4×16+1 y 64+1."
+  },
+  {
+    "id": "19.2",
+    "categoryId": "19",
+    "prompt": "Representa el carácter ASCII `0` (dígito) con su código decimal y binario.",
+    "academicAnswer": "48₁₀ y `00110000₂`.",
+    "explanation": "El carácter \"0\" no tiene código numérico cero; su código ASCII es 48=32+16."
+  },
+  {
+    "id": "19.3",
+    "categoryId": "19",
+    "prompt": "Indica los códigos ASCII decimales de `Hi` y sus bytes binarios.",
+    "academicAnswer": "72 y 105; `01001000 01101001`.",
+    "explanation": "H=72=64+8; i=105=64+32+8+1."
+  },
+  {
+    "id": "19.4",
+    "categoryId": "19",
+    "prompt": "¿Cuántos bytes ocupa `ñ` en UTF-8 y cuáles son en hexadecimal?",
+    "academicAnswer": "Dos bytes: `C3 B1`.",
+    "explanation": "El punto de código U+00F1 se codifica en UTF-8 como dos bytes, no como un byte ASCII."
+  },
+  {
+    "id": "20.1",
+    "categoryId": "20",
+    "prompt": "Convierte RGB `(18, 52, 86)` a color hexadecimal.",
+    "academicAnswer": "`#123456`.",
+    "explanation": "18=12₁₆; 52=34₁₆; 86=56₁₆. Concatenar dos dígitos por canal."
+  },
+  {
+    "id": "20.2",
+    "categoryId": "20",
+    "prompt": "Escribe RGB `(0, 128, 255)` en tres bytes binarios.",
+    "academicAnswer": "`00000000 10000000 11111111`.",
+    "explanation": "Cada canal usa ocho bits y se escribe en orden R-G-B."
+  },
+  {
+    "id": "20.3",
+    "categoryId": "20",
+    "prompt": "Calcula el tamaño de los píxeles RGB24 sin comprimir de una imagen de `10 × 10`.",
+    "academicAnswer": "300 bytes (2400 bits).",
+    "explanation": "100 píxeles×3 bytes por píxel=300 bytes; 300×8=2400 bits."
+  },
+  {
+    "id": "20.4",
+    "categoryId": "20",
+    "prompt": "Interpreta el color hexadecimal `#FF00FF` como valores RGB decimales.",
+    "academicAnswer": "`(255, 0, 255)`.",
+    "explanation": "FF₁₆=255 y 00₁₆=0; R=255, G=0, B=255."
+  },
+  {
+    "id": "21.1",
+    "categoryId": "21",
+    "prompt": "Calcula los bytes de 10 s de audio PCM mono a 8000 muestras/s y 8 bits/muestra.",
+    "academicAnswer": "80.000 bytes.",
+    "explanation": "8000×8×1×10=640.000 bits; dividir entre 8=80.000 bytes."
+  },
+  {
+    "id": "21.2",
+    "categoryId": "21",
+    "prompt": "Calcula los bytes de 2 s PCM estéreo a 44.100 Hz y 16 bits.",
+    "academicAnswer": "352.800 bytes.",
+    "explanation": "44.100×16×2×2÷8=352.800 bytes."
+  },
+  {
+    "id": "21.3",
+    "categoryId": "21",
+    "prompt": "Calcula los bytes de 1 s PCM mono a 22.050 Hz y 16 bits.",
+    "academicAnswer": "44.100 bytes.",
+    "explanation": "22.050×16×1×1÷8=44.100 bytes."
+  },
+  {
+    "id": "21.4",
+    "categoryId": "21",
+    "prompt": "¿Qué tipo de compresión garantiza reconstruir exactamente los datos originales?",
+    "academicAnswer": "Compresión sin pérdida.",
+    "explanation": "Una compresión sin pérdida permite recuperar cada bit original; una con pérdida no garantiza reconstrucción exacta."
+  }
+]
