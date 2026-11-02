@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "review": "2026-11-01-ieee-independent-example",
+  "review": "2026-11-02-academic-corrections-A01-A04",
   "purpose": "Integrity of editorially reviewed content; not a certificate of authorship, rights or permissions.",
   "fileAlgorithm": "SHA-256 over UTF-8 text with CRLF normalized to LF",
   "exerciseAlgorithm": "SHA-256 over compact JSON [id,categoryId,prompt,academicAnswer,explanation] with literal Unicode",
   "files": [
     {
       "path": "src/content/topics/01.md",
-      "sha256": "8d8df0e1961a7725f35df0155d14502dea9e061305b8c4acbe1704e082de8d93"
+      "sha256": "8c56c693f8cc2905f70d93a4a522b86e6e0ab32257a9dcea55fa294178b14070"
     },
     {
       "path": "src/content/topics/02.md",
-      "sha256": "8f1ced5120f6d785b41f58063ebe6f28d29e230febf21b127b474903fc8e65a3"
+      "sha256": "ca443cbc8e61a6eb90d7e439a07aa311be12d3a338e05a2dc9592ce9d9452b3e"
     },
     {
       "path": "src/content/topics/03.md",
@@ -19,7 +19,7 @@
     },
     {
       "path": "src/content/topics/04.md",
-      "sha256": "8c5ad1f1a7744fb9c915bd62d3471208fde25d8abfea52da56fe948434e2c8d6"
+      "sha256": "59837e165e4c842e2dfe33d6c2469dc82902ad452826a02c0d0ff58ce6d78d7b"
     },
     {
       "path": "src/content/topics/05.md",
@@ -35,7 +35,7 @@
     },
     {
       "path": "src/content/topics/08.md",
-      "sha256": "77c43d2e831d3aa6c4286bc5b6cbae6b928948568b8b417be4e9065a1f63c635"
+      "sha256": "59cffeb9a19fffbab22217d3f062e19d54e1ed4a084ac866ae117d8ff593d42f"
     },
     {
       "path": "src/content/topics/09.md",
@@ -43,7 +43,7 @@
     },
     {
       "path": "src/content/topics/10.md",
-      "sha256": "3904dd030f1beb087faaa0c1886de6a1f3279e9e7ee2bcccad93d879dbbfc798"
+      "sha256": "908c52667a1e9279cc6b1787b00da14b76f568a0a115311d4ce8390f7c7e223d"
     },
     {
       "path": "src/content/topics/11.md",
@@ -59,7 +59,7 @@
     },
     {
       "path": "src/content/topics/14.md",
-      "sha256": "6117f90bf6e3ef63d85e8d9d83a7c3451d9b90f46870ba4c306c097584dd93a9"
+      "sha256": "3b3129865e6cb33bd22b652a32b0a5e3ade57943d73aab78e026bf5a20b4ee0f"
     },
     {
       "path": "src/content/topics/15.md",
@@ -71,7 +71,7 @@
     },
     {
       "path": "src/content/topics/17.md",
-      "sha256": "7c840b8ea5ce36d08fa8b545d8328e41b11349edba2f87059f73458511c4f8c2"
+      "sha256": "afe7dd3934498f0cfa1bd37377ab2457fad069e769e101994ec3c36c4939206f"
     },
     {
       "path": "src/content/topics/18.md",
@@ -79,7 +79,7 @@
     },
     {
       "path": "src/content/topics/19.md",
-      "sha256": "c527d114537f5aa8016f90e2934420c5cef9deba4c0876a6f956ea567a645c14"
+      "sha256": "24177244bb0a9336442a2781ee668be796089a05279ba784c4284e19e35f471a"
     },
     {
       "path": "src/content/topics/20.md",
@@ -87,7 +87,7 @@
     },
     {
       "path": "src/content/topics/21.md",
-      "sha256": "e79d4e664668aa57d98deae7a1c1049b8cee8e7d2c65fe744d1a46616828afc5"
+      "sha256": "795aa4645d3e854ded658dea3c63f1cbe5ad0a5b8b9bc387c97817afa9688f0e"
     },
     {
       "path": "src/content/topics/22.md",
