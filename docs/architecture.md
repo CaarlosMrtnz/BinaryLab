@@ -19,6 +19,8 @@ Los temas claro/oscuro y Lectura cómoda viven en memoria; no se guardan prefere
 
 ## Ejecución y distribución
 
-La versión exacta de Node se obtiene de `.nvmrc`; `package-lock.json` fija las dependencias. GitHub Actions lee ese archivo y Netlify está configurado para build estático con fallback SPA. La configuración no implica que se haya realizado un despliegue real.
+La versión exacta de Node se obtiene de `.nvmrc`; `package-lock.json` fija las dependencias. GitHub Actions utiliza esa versión de Node y Netlify sirve archivos estáticos por ruta válida, con fallback `404` no forzado. La configuración no implica que se haya realizado un despliegue real.
+
+`src/app/seo.ts` comparte las 49 rutas y sus metadatos entre React y `scripts/generate-seo.mjs`. Después de Vite, el build genera las cabeceras HTML por ruta, `404.html`, `robots.txt` y `sitemap.xml` en `dist/`. El contenido y las demostraciones siguen renderizándose en el cliente. Los canonical omiten query, fragmentos, `index.html` y barras finales salvo `/`; las rutas inválidas reciben `noindex` y no tienen canonical. Netlify conserva los archivos existentes antes de aplicar el fallback y desactiva Pretty URLs para mantener esta política.
 
 `public/THIRD-PARTY-NOTICES.txt` y las cuatro licencias OFL se copian al build; `npm run license:check` comprueba los avisos contra las dependencias instaladas. Los cálculos no realizan peticiones externas. Los tests se describen en [verification.md](verification.md).

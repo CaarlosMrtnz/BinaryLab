@@ -2,6 +2,8 @@
 
 # BinaryLab
 
+**[Live Demo](https://binarylab-interactive.netlify.app/)**
+
 A visual learning lab for number systems and computer data representation. Convert between bases, edit bits and follow the calculations step by step, then explore the theory and practise with guided exercises.
 
 Documentation is available in English and Spanish. The application currently supports Spanish only.
@@ -62,7 +64,7 @@ npm run test:e2e
 
 `check` validates third-party notices, TypeScript, ESLint, Prettier, unit/component tests and the production build. The toolchain check validates the pinned Node version and runs targeted dependency compatibility checks. Playwright installs Chromium in `artifacts/pw-browsers/` and tests that build using the project's own configuration. Keep port **4173** free so the tests serve this copy of the application. On Linux, system dependencies can be installed with `npm run browser:install -- --with-deps`.
 
-**Latest local application validation: 2 November 2026, Node 24.22.2.** `npm run check` passed with **153 unit/component tests in seven files**; `npm run test:e2e` passed all **22 Chromium E2E tests**, without failures or skipped tests. These are recorded local results, not a remote CI run, deployed-site validation or WCAG certification. See [verification details and limits](docs/verification.md) and the [dependency review](docs/dependency-review.md).
+**Latest local application validation: 2 November 2026, Node 24.22.2.** `npm run check` passed with **174 unit, component and build tests in nine files**; `npm run test:e2e` passed all **27 Chromium E2E tests**, without failures or skipped tests. These are recorded local results, not a remote CI run, deployed-site validation or WCAG certification. See [verification details and limits](docs/verification.md) and the [dependency review](docs/dependency-review.md).
 
 ## Production build and static deployment
 
@@ -71,7 +73,7 @@ npm run build
 npm run preview -- --port 4173
 ```
 
-The build produces `dist/`; preview serves it locally on port 4173. [GitHub Actions](.github/workflows/ci.yml) is configured for a clean npm installation and the checks above, including Chromium system dependencies. [Netlify configuration](netlify.toml) defines the build, output directory and SPA fallback for direct navigation to nested routes. Node is pinned through `.nvmrc`. No remote CI run or live deployment is claimed.
+The build produces `dist/`; preview serves it locally on port 4173. [GitHub Actions](.github/workflows/ci.yml) is configured for a clean npm installation and the checks above, including Chromium system dependencies. [Netlify configuration](netlify.toml) defines the build, output directory, static pages for valid routes and a 404 fallback. Node is pinned through `.nvmrc`.
 
 ## Licences and attribution
 

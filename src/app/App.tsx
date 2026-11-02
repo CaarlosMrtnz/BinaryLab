@@ -22,11 +22,13 @@ import {
 } from 'lucide-react';
 import { categories, groups, topics } from '@/content/catalog';
 import ConverterPage from '@/features/converter/ConverterPage';
+import { applySeoHead, resolveSeoPage, type SeoPage } from './seo';
 const LearnPage = lazy(() => import('@/features/learn/LearnPage'));
 const PracticePage = lazy(() => import('@/features/practice/PracticePage'));
 
 function Navigation({ close }: { close?: () => void }) {
   const location = useLocation();
+  const pathname = resolveSeoPage(location.pathname).path ?? location.pathname;
   return (
     <nav aria-label="Navegación principal" className="navigation">
       <p className="eyebrow nav-caption">TU ESPACIO DE TRABAJO</p>
@@ -36,7 +38,7 @@ function Navigation({ close }: { close?: () => void }) {
       </NavLink>
       <details
         className="nav-section"
-        open={location.pathname.startsWith('/aprender') || undefined}
+        open={pathname.startsWith('/aprender') || undefined}
       >
         <summary>
           <BookOpen size={19} />
@@ -52,8 +54,7 @@ function Navigation({ close }: { close?: () => void }) {
             className="nav-group"
             open={
               topics.some(
-                (t) =>
-                  t.group === i && location.pathname.endsWith('/' + t.slug),
+                (t) => t.group === i && pathname.endsWith('/' + t.slug),
               ) || undefined
             }
           >
@@ -74,7 +75,7 @@ function Navigation({ close }: { close?: () => void }) {
       </details>
       <details
         className="nav-section"
-        open={location.pathname.startsWith('/practicar') || undefined}
+        open={pathname.startsWith('/practicar') || undefined}
       >
         <summary>
           <FlaskConical size={19} />
@@ -110,23 +111,11 @@ function Navigation({ close }: { close?: () => void }) {
     </nav>
   );
 }
-function RouteEffects() {
-  const { pathname } = useLocation();
+function RouteEffects({ page, pathname }: { page: SeoPage; pathname: string }) {
   useEffect(() => {
-    const title = pathname.startsWith('/aprender/')
-      ? topics.find((t) => pathname.endsWith('/' + t.slug))?.title
-      : pathname.startsWith('/practicar/')
-        ? categories.find((c) => pathname.endsWith('/' + c.id))?.title
-        : pathname === '/aprender'
-          ? 'Aprender'
-          : pathname === '/practicar'
-            ? 'Practicar'
-            : pathname === '/'
-              ? 'Conversor de bases'
-              : 'Página no encontrada';
-    document.title = `${title ?? 'Página no encontrada'} · BinaryLab`;
+    applySeoHead(page);
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [page, pathname]);
   return null;
 }
 export function NotFound() {
@@ -142,6 +131,8 @@ export function NotFound() {
   );
 }
 function Shell() {
+  const location = useLocation();
+  const page = resolveSeoPage(location.pathname);
   const [dark, setDark] = useState(false),
     [reading, setReading] = useState(false),
     [menu, setMenu] = useState(false);
@@ -160,7 +151,7 @@ function Shell() {
       <a className="skip-link" href="#main">
         Saltar al contenido
       </a>
-      <RouteEffects />
+      <RouteEffects page={page} pathname={location.pathname} />
       <header className="app-header">
         <div className="brand-area">
           <Dialog.Root open={menu} onOpenChange={setMenu}>
@@ -246,14 +237,17 @@ function Shell() {
               </p>
             }
           >
-            <Routes>
-              <Route path="/" element={<ConverterPage />} />
-              <Route path="/aprender" element={<LearnPage />} />
-              <Route path="/aprender/:topic" element={<LearnPage />} />
-              <Route path="/practicar" element={<PracticePage />} />
-              <Route path="/practicar/:category" element={<PracticePage />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            {page.path === null ? (
+              <NotFound />
+            ) : (
+              <Routes location={{ ...location, pathname: page.path }}>
+                <Route path="/" element={<ConverterPage />} />
+                <Route path="/aprender" element={<LearnPage />} />
+                <Route path="/aprender/:topic" element={<LearnPage />} />
+                <Route path="/practicar" element={<PracticePage />} />
+                <Route path="/practicar/:category" element={<PracticePage />} />
+              </Routes>
+            )}
           </Suspense>
         </main>
       </div>
